@@ -1,0 +1,29 @@
+table {
+  background-color: white;
+  border-collapse: collapse;
+}
+
+th {
+  border: 1px solid black;
+  padding: 8px;
+  font-weight: 500;
+}
+
+.dbFields {
+  background-color: gray;
+  color: white;
+}
+
+.dbFields > th{
+  font-weight: 700;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10vh;
+
+  min-height: 90vh;
+  padding: 50px 0;
+}

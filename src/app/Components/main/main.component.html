@@ -1,0 +1,31 @@
+<div class="main">
+  <app-form reqType="{{reqType}}" [customer]="customer"></app-form>
+  <table>
+    <tr class="dbFields">
+        <th>id</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>active</th>
+        <th>fileName</th>
+        <th>filePath</th>
+        <th>fileType</th>
+
+        <th></th>
+        <th></th>
+        <th><app-button text="NEW USER" (btnClick)="reqType = 'POST'"></app-button></th>
+    </tr>
+    <tr *ngFor="let value of customers">
+      <th>{{value.id}}</th>
+      <th>{{value.firstName}}</th>
+      <th>{{value.lastName}}</th>
+      <th>{{value.active}}</th>
+      <th>{{value.fileName}}</th>
+      <th>{{value.filePath}}</th>
+      <th>{{value.fileType}}</th>
+      <th><app-button text="Download file" (btnClick)="downloadFile(value.id)"></app-button></th>
+      <th><app-button text="EDIT" (btnClick)="replaceCustomer(value)" (btnClick)="reqType = 'PUT'"></app-button></th>
+      <th><app-button text="DELETE" (btnClick)="deleteCustomer(value.id)"></app-button></th>
+    </tr>
+
+  </table>
+</div>

@@ -1,0 +1,28 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="myForm">
+  <h2>{{reqType}}</h2>
+  <div>
+    <label for="fname" class="label">First Name</label>
+    <input type="text" id="fname" placeholder="Your name.." formControlName="firstName">
+
+    <p class="error-msg"*ngIf="firstName?.invalid && firstName?.touched">Please enter your first name</p>
+  </div>
+
+  <div>
+    <label for="lname" class="label">Last Name</label>
+    <input matInput type="text" id="lName" name="lastName" placeholder="Your last name.." formControlName="lastName">
+
+    <p class="error-msg"*ngIf="lastName?.invalid && lastName?.touched">Please enter your last name</p>
+  </div>
+
+  <div>
+    <label for="active" class="label">Active</label>
+    <input type="checkbox" id="active" name="active" formControlName="active">
+  </div>
+
+  <div>
+    <label for="file" class="label">File</label>
+    <input type="file" id="file" name="file" formControlName="file" (change)="onFileChange($event)">
+  </div>
+
+  <input type="submit" value="Submit">
+</form>

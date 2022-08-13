@@ -1,0 +1,22 @@
+{
+  "customers":[
+    {
+      "id": 1,
+      "firstName": "Jordane",
+      "lastName": "Jacobson",
+      "active": true,
+      "fileName": "324508.JPG",
+      "filePath": "C:\\Users\\itomic\\Desktop\\Projects\\AccessDataWJPA\\build\\resources\\main\\static\\files",
+      "fileType": "image/jpeg"
+    },
+    {
+      "id": 2,
+      "firstName": "Jordane",
+      "lastName": "Jacobson",
+      "active": true,
+      "fileName": "324508.JPG",
+      "filePath": "C:\\Users\\itomic\\Desktop\\Projects\\AccessDataWJPA\\build\\resources\\main\\static\\files",
+      "fileType": "image/jpeg"
+    }
+  ]
+}
