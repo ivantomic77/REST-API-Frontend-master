@@ -1,6 +1,7 @@
 table {
   background-color: white;
   border-collapse: collapse;
+  max-width: 900px;
 }
 
 th {

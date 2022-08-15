@@ -31,6 +31,9 @@ export class FormComponent implements OnInit {
 
   onSubmit() {
     if(this.reqType === 'POST'){
+      if (!this.validateCustomer(this.myForm)){
+        return;
+      }
       this.customer.set('firstName', this.myForm.controls['firstName'].value);
       this.customer.set('lastName', this.myForm.controls['lastName'].value);
       this.customer.set('active', this.myForm.controls['active'].value);
@@ -49,6 +52,23 @@ export class FormComponent implements OnInit {
 
     this.myForm.reset();
   }
+
+  validateCustomer(customer:FormGroup) {
+    if (customer.controls['firstName'].value.length === 0) {
+      alert('Please fill field: firstName');
+      return false;
+    }
+    if (customer.controls['lastName'].value.length === 0) {
+      alert('Please fill field: lastName');
+      return false;
+    }
+    if (customer.controls['file'].value === null) {
+      alert('Please fill field: file');
+      return false;
+    }
+    return true;
+  }
+
   onFileChange(event:any){
     const file = event.target.files[0];
     this.myForm.patchValue({file: file});
